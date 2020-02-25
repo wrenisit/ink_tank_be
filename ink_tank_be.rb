@@ -7,7 +7,7 @@ class InkTankBE < Sinatra::Base
     # param_amount = params[:amount]
     # param_source = params[:source]
     binding.pry
-    Stripe.api_key = XXX
+    Stripe.api_key = ENV['STRIPE_KEY']
     charge = Stripe::Charge.create({amount: '20000', currency: 'usd', source: 'tok_mastercard'})
   end
 end
