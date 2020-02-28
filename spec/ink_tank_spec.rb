@@ -10,15 +10,5 @@ RSpec.describe 'The Ink Tank' do
   def app
     Sinatra::Application
   end
-  include Rack::Test::Methods
-    let(:ink_tank_be) { InkTankBE.new }
-
-    context "GET to /advice" do
-      let(:response) { get "/advice" }
-      binding.pry
-      it "returns status 200 OK" do
-        expect(response.status).to eq 200
-      end
-    end
-  end
+end
 end
